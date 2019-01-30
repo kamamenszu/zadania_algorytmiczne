@@ -13,11 +13,16 @@ NWD(12, 15);
 
 function greatestShareDivisor(a, b) {
     var nwd = 0;
-    while (nwd < a && a < b) {
-        nwd = nwd + 1;
-        a = a / nwd;
-        b = b / nwd;
+    while (nwd <= a) {
+        if (a % nwd === 0) {
+            nwd++
+        }
     };
     return nwd;
 }
 
+
+
+nwd = nwd + 1;
+a = a / nwd;
+b = b / nwd;
